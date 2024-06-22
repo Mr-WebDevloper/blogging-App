@@ -1,0 +1,172 @@
+// Here you can add other styles
+
+/* Absolute Center Spinner */
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  
+  
+  // Here you can add other styles 
+   
+  @media (min-width: 1800px) { 
+   
+      .container, 
+      .container-sm, 
+      .container-md, 
+      .container-lg, 
+      .container-xl, 
+      .container-xxl { 
+          max-width: 1850px !important; 
+      } 
+  } 
+   
+  @media (min-width: 3000px) { 
+   
+      //For 4K Displays (Ultra HD) 
+      .container, 
+      .container-sm, 
+      .container-md, 
+      .container-lg, 
+      .container-xl, 
+      .container-xxl { 
+          max-width: 3800px !important; 
+      } 
+  
+      .cardbody {
+        position: absolute;
+        top: 470px;
+        margin-left: 47px;
+        width: 81vh !important;
+    }
+  
+    .sidemargin[_ngcontent-ng-c2146769882] {
+      margin-left: 34px;
+      margin-right: 22px;
+  }
+  .imgBody[_ngcontent-ng-c2146769882] {
+    height: 250px !important;
+    margin-left: 286px !important;
+  }
+  .largeBody[_ngcontent-ng-c2146769882] {
+    margin-left: 10vh;
+    margin-bottom: 2vh;
+    font-size: xxx-large;
+  }
+  
+  
+  .form-label {
+      margin-bottom: 0.5rem;
+      font-size: 47px;
+      /* height: 64px; */
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 3rem !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(44, 56, 74, 0.95);
+    appearance: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #b1b7c1;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .submitBtn[_ngcontent-ng-c2146769882] {
+    margin-left: 483px !important;
+    width: 277px !important;
+    margin-top: 41px !important;
+    height: 4vh !important;
+    font-size: 1.4vh !important;
+    margin-bottom: 5vh !important;
+  }
+  .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 3rem !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(44, 56, 74, 0.95);
+    appearance: none;
+    background-color: #fff;
+    background-image: var(--cui-form-select-bg-img), var(--cui-form-select-bg-icon, none);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #b1b7c1;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .btn-btn-primary.me-2
+  {
+    width: 25vh !important;
+      font-size: 3vh !important;
+      margin: 3vh !important;
+  }
+  }
+  // @media (min-width: 3840px) { 
+  //   .input[type="text"]
+  //   textarea{
+  //     font-size: 20px;
+  //     padding: 10px;
+  //   }
+  //   .lable{
+  //     font-size: 22px;
+  //   }
+  //   //For 4K Displays (Ultra HD) 
+  //   .container, 
+  //   .container-sm, 
+  //   .container-md, 
+  //   .container-lg, 
+  //   .container-xl, 
+  //   .container-xxl { 
+  //       max-width: 3800px !important; 
+  //   }
+    
+   
+  // }

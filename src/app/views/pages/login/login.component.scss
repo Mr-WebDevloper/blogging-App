@@ -1,0 +1,76 @@
+.cardbody {
+    position: absolute;
+    top: 102px;
+    margin-left: 45px;
+    width: 450px;
+}
+
+.sidemargin {
+    margin-left: 34px;
+    margin-right: 22px;
+}
+
+.invalid-email {
+    border-color: red;
+    border-width: 2px;
+}
+
+.submitBtn {
+    margin-left: 118px;
+    width: 120px;
+    margin-top: 5px;
+}
+
+.loginBody {
+    height: 651px;
+    width: 1362px;
+    background-color: rgb(245 247 255);
+}
+
+.card {
+    box-shadow: (0 0 0 rgba(183, 192, 206, 0.2))
+}
+
+.imgBody {
+    height: 210px;
+    margin-left: 57px;
+}
+
+.color{
+color: rgb(249 173 48);
+}
+
+@media screen and (min-width: 1620px) {
+    body {
+        font-size: 18px;
+    }
+
+    .loginBody {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(245, 247, 255);
+    }
+
+    .cardbody {
+        position: absolute;
+        top: 253px;
+        margin-left: 47px;
+        width: 62vh;
+    }
+
+    .submitBtn {
+        margin-left: 222px;
+        width: 137px;
+        margin-top: 14px;
+    }
+
+    .largeBody {
+        margin-left: 10vh;
+        margin-bottom: 2vh;
+    }
+
+    .imgBody {
+        height: 90px;
+        margin-left: 188px;
+    }
+}

@@ -1,0 +1,55 @@
+LMS-(Leave Management System)
+
+Users Roles - SuperAdmin , HR,Admin, User
+
+SuperAdmin's work -
+
+create admin - in this page he can create HR and then Hr will Add Admins
+Create Holiday Type - Here firsty create Public as Holiday type
+Create Holiday - Holidays can add
+Assign Holiday - Assign leave to users
+View Public Holiday Calender - check all year holidays 
+View Balanced Leaves - balanced Leaves will display here
+Leave Apply           - he can apply leave and check applied leaves in history and pending tab
+Add Onboarding Details - this page use to add onboarding details of user
+Add contact Details  - here he can add contact details 
+
+
+
+HR's Work - 
+
+Create admin - In this page hr can create  Admin and Users w.r.t reporting 
+
+Create Holiday Type - Here firsty create Public as Holiday type
+Create Holiday - Holidays can add
+Assign Holiday - Assign leave to users
+View Public Holiday Calender - check all year holidays 
+View Balanced Leaves - balanced Leaves will display here
+Leave Apply           - he can apply leave and check applied leaves in history and pending tab
+Add Onboarding Details - this page use to add onboarding details of user
+Add contact Details  - here he can add contact details 
+View Onboarding List - here HR will check all onboarding details of users in list and updates data also 
+View Conatact List - here HR will check all Conatact details of users in list and updates data also 
+
+
+
+Admin's Work - 
+
+View Public Holiday Calender - check all year holidays 
+View Balanced Leaves - balanced Leaves will display here
+Leave Apply           - he can apply leave and check applied leaves in history and pending tab
+Add Onboarding Details - this page use to add onboarding details of user
+Add contact Details  - here he can add contact details 
+My users- here admin can view his users  
+
+
+Users's Work -
+
+
+View Public Holiday Calender - check all year holidays 
+View Balanced Leaves - balanced Leaves will display here
+Leave Apply           - he can apply leave and check applied leaves in history and pending tab
+Add Onboarding Details - this page use to add onboarding details of user
+Add contact Details  - here he can add contact details 
+
+

@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <form class="forms-sample" (ngSubmit)="addBlog()">
+            <div class="mb-3">
+              <label for="BlogName" class="form-label">Title</label>
+              <input type="BlogName" class="form-control" autocomplete="off" name="BlogName" [(ngModel)]="title"
+                placeholder="Please enter blog name ">
+            </div>
+           
+            <div class="mb-3">
+              <label for="BlogName" class="form-label">Blog Description </label>
+              <input type="text" class="form-control" autocomplete="off" name="Bloglevel" [(ngModel)]="blogDescription"
+                placeholder="Please enter description ">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Choose Category</label>
+                <ng-select  [items]="allCategories" bindValue="name" bindLabel="name" [(ngModel)]="category" 
+                name="category"  placeholder="Please select category" >
+                <option value="0">Select Category</option>
+               </ng-select>
+              </div>
+            <div class="mb-3">
+                <label class="form-label" for="formFile">Upload Blog Images</label>
+                <input class="form-control" type="file" id="image-uploadify"  type="file"
+                  name="file" (change)="getImages($event)">
+              </div>
+            <button class="btn btn-primary me-2">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of allblog; let i = index">
+                  <th>{{i+1}}</th>
+                  <td>{{d.title}} </td>
+                  <td>{{d.description}} </td>
+                  <td>
+                    <button class="btn btn-primary me-2" (click)="openLgModalAdd(lgModalAdd,d)">Edit</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-primary me-2" (click)="deleteBlog(d)">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <ng-template #lgModalAdd let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Update Blog</h5>
+      <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form class="forms-sample" (ngSubmit)="updateblog()">
+        <div class="mb-3">
+            <label for="BlogName" class="form-label"> Title</label>
+            <input type="BlogName" class="form-control" autocomplete="off" name="BlogName" [(ngModel)]="title"
+            placeholder="Please enter title ">
+          </div>
+        <div class="mb-3">
+            <label for="blogDescription" class="form-label">Blog Description </label>
+            <input type="text" class="form-control" autocomplete="off" name="blogDescription" [(ngModel)]="blogDescription"
+            placeholder="Please enter blog description ">
+          </div>
+
+          <div class="mb-3">
+            <label for="category" class="form-label">Choose Category</label>
+            <ng-select  [items]="allCategories" bindValue="name" bindLabel="name" [(ngModel)]="category" 
+            name="category"  placeholder="Please select category">
+            <option value="0">Select Category</option>
+           </ng-select>
+          </div>    
+
+          <div class="mb-3">
+            <label class="form-label" for="formFile">Upload Blog Images</label>
+            <input class="form-control" type="file" id="image-uploadify"  type="file"
+              name="file" (change)="getImages($event)">
+          </div>
+
+        <button class="btn btn-primary me-2">Update</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+    </div>
+  </ng-template>
+  
+  
+  <!-- <div class="loading" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div> -->

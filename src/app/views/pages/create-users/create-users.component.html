@@ -1,0 +1,41 @@
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="forms-sample" (ngSubmit)="createUser()">
+                   
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" autocomplete="off" name="name" [(ngModel)]="name"
+                            placeholder="Please enter name" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailId" class="form-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="Please enter email address" name="emailId" [(ngModel)]="emailId"   required [class.invalid-email]="inValidEmail" onkeypress="return event.charCode != 32">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mobile" class="form-label">Mobile No</label>
+                        <input type="text" class="form-control" autocomplete="off" name="mobile" [(ngModel)]="mobile"
+                            placeholder="Please enter mobile no" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordStr" class="form-label">Password</label>
+                        <input type="password" class="form-control" autocomplete="off" name="passwordStr" [(ngModel)]="passwordStr"
+                            placeholder="Please enter password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Confirmpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" autocomplete="off" name="Cpassword" [(ngModel)]="Cpassword"
+                            placeholder="Please enter confirm password">
+                    </div>
+                    <button class="btn btn-primary me-2" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="loading" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>

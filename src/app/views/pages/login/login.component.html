@@ -1,0 +1,36 @@
+<div class="row w-100 mx-0 auth-page" class="loginBody ">
+  <div class="col-md-8 col-xl-4 mx-auto">
+    <div class="card cardbody">
+      <div class="row">
+        <div class="col-md-12 ps-md-0">
+          <div class="auth-form-wrapper px-4 py-5 formwrapper sidemargin">
+            <a routerLink="." class="nobleui-logo d-block mb-2">
+              <!-- <img src="../../../../assets/images/Blue and Yellow Modern Education Logo.png" class="imgBody" /> -->
+            </a>
+            <h5 class="largeBody">Welcome back! Log in to your account.</h5>
+            <form class="forms-sample">
+              <div class="mb-3">
+                <label for="emailId" class="form-label">Email address</label>
+                <input autoSizeInput  type="email" class="form-control input-group-lg" name="emailId" placeholder="Email" [(ngModel)]="emailId"
+                  required [class.invalid-email]="inValidEmail">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password"
+                  [(ngModel)]="password">
+              </div>
+              <div>
+                <button type="submit" class="btn btn-warning  submitBtn" 
+                  (click)="onLoggedin()">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>

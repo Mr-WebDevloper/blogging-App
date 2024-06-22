@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <form class="forms-sample" (ngSubmit)="addCategory()">
+            <div class="mb-3">
+              <label for="CategoryName" class="form-label">Category Name</label>
+              <input type="text" class="form-control" autocomplete="off" name="CategoryName" [(ngModel)]="CategoryName"
+                placeholder="Please enter category name ">
+            </div>
+         
+       
+            <button class="btn btn-primary me-2">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>name</th>
+                 
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let category of allCategory; let i = index">
+                  <th>{{i+1}}</th>
+                  <td>{{category.name}} </td>
+                
+                  
+                  <td>
+                    <button class="btn btn-primary me-2" (click)="openLgModalAdd(lgModalAdd,category)">Edit</button>
+                    <button class="btn btn-primary me-2" (click)="deleteCategory(category)">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <ng-template #lgModalAdd let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Update Category</h5>
+      <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form class="forms-sample" (ngSubmit)="updateCategory()">
+       
+        <div class="mb-3">
+            <label for="CategoryName" class="form-label">Category Name</label>
+            <input type="text" class="form-control" autocomplete="off" name="CategoryName" [(ngModel)]="CategoryName"
+              placeholder="Please enter category name ">
+          </div>
+
+        <button class="btn btn-primary me-2">Update</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+    </div>
+  </ng-template>
+  
+  
+  <!-- <div class="loading" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div> -->
